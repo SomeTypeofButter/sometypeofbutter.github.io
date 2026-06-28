@@ -1,15 +1,16 @@
 import { siteConfig } from "@/data/config";
-import { Instagram, Linkedin, Palette, Github } from "lucide-react";
+import { FaInstagram, FaLinkedin, FaArtstation, FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa6";
 import Image from "next/image";
 
 // Helper function to render the correct icon based on the config string
 const renderIcon = (iconName: string) => {
   switch (iconName.toLowerCase()) {
-    case 'instagram': return <Instagram size={24} />;
-    case 'linkedin': return <Linkedin size={24} />;
-    case 'artstation': return <Palette size={24} />;
-    case 'github': return <Github size={24} />;
-    default: return <div className="w-6 h-6 bg-gray-400 rounded-sm"></div>;
+    case 'instagram': return <FaInstagram size={22} />;
+    case 'linkedin': return <FaLinkedin size={22} />;
+    case 'artstation': return <FaArtstation size={22} />;
+    case 'github': return <FaGithub size={22} />;
+    default: return <FaLink size={22} />;
   }
 };
 
