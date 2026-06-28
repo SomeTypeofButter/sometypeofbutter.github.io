@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "JESSICA SUN",
-  heroImage: "/hero-bg.jpg", // Path to your hero background image
+  heroImage: "/Rookie-Cover.png", // Path to your hero background image
   links: {
     about: "/about",
     resume: "/resume.pdf",

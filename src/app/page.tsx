@@ -34,16 +34,16 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/20 to-black"></div>
 
         {/* Center Content */}
-        <div className="relative z-10 flex flex-col items-center text-center mt-20">
-          <p className="text-gray-400 text-sm md:text-base tracking-widest uppercase mb-4">
+        <div className="relative z-10 flex flex-col items-center text-center mt-[25vh]">
+          <p className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-2 font-medium">
             PORTFOLIO OF
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-wide mb-8">
+          <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-medium tracking-normal mb-8">
             {siteConfig.name}
           </h1>
           
           {/* Navigation Links */}
-          <div className="flex gap-4 text-gray-300 text-sm md:text-base tracking-widest uppercase mb-8">
+          <div className="flex gap-4 text-[#8a8a8a] text-sm tracking-widest uppercase mb-6">
             <a href={siteConfig.links.about} className="hover:text-white transition-colors">ABOUT ME</a>
             <span className="text-gray-600">|</span>
             <a href={siteConfig.links.resume} className="hover:text-white transition-colors">RESUME</a>
@@ -57,7 +57,7 @@ export default function Home() {
                 href={social.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-200/20 hover:bg-white hover:text-black rounded-md flex items-center justify-center transition-all duration-300"
+                className="w-10 h-10 bg-[#e0e0e0] text-black hover:bg-white rounded-sm flex items-center justify-center transition-all duration-300"
                 aria-label={social.name}
               >
                 {renderIcon(social.icon)}
@@ -70,8 +70,8 @@ export default function Home() {
       {/* 
         PROJECTS GRID SECTION 
       */}
-      <div className="w-full max-w-6xl mx-auto px-6 py-20 pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-full max-w-6xl mx-auto px-6 py-20 pb-32 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {siteConfig.projects.map((project) => (
             <a 
               key={project.id} 
@@ -79,7 +79,7 @@ export default function Home() {
               className="group flex flex-col cursor-pointer"
             >
               {/* Project Thumbnail */}
-              <div className="aspect-square w-full rounded-xl overflow-hidden border border-gray-800 bg-gray-900 mb-6 relative">
+              <div className="aspect-square w-full rounded-2xl overflow-hidden mb-4 relative bg-[#0a0a0a]">
                 {/* 
                   Replace this placeholder with the Next.js Image component once you add 
                   your actual images to the public folder:
