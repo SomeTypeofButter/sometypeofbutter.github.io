@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | XR & Technical Artist</title>
+    <!-- Load React. -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Load Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // --- React Components ---
+
+        const Header = () => (
+            <header className="hero fade-in">
+                <h1>HI, I'M [YOUR NAME]</h1>
+                <h2>Immersive Mixed Reality Artist & VR Developer</h2>
+                <p>Specializing in optimized VR environments, interactive narratives, and technical art.</p>
+            </header>
+        );
+
+        const ProjectCard = ({ title, tags, description }) => (
+            <div className="project-card slide-up">
+                <h3>{title}</h3>
+                <div className="tags">
+                    {tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
+                </div>
+                <p>{description}</p>
+                <div className="media-placeholder">[Video/Image Placeholder]</div>
+            </div>
+        );
+
+        const Portfolio = () => {
+            const projects = [
+                {
+                    title: "The Anomaly (VR)",
+                    tags: ["UE5", "Marvelous Designer", "MetaHuman", "Optimization"],
+                    description: "A VR experience exploring information overload. Built in UE5 utilizing stationary mechanics, forced LODs for performance, and complex cloth simulations."
+                },
+                {
+                    title: "X-Crawler",
+                    tags: ["Interaction Design", "Blueprint", "UI/UX"],
+                    description: "An interactive project featuring a custom Carrier & Element Detachment card system with optimized VR hand interactions."
+                }
+            ];
+
+            return (
+                <div className="container">
+                    <Header />
+                    <section id="projects">
+                        <h2>SELECTED WORKS</h2>
+                        {projects.map((proj, index) => (
+                            <ProjectCard 
+                                key={index}
+                                title={proj.title}
+                                tags={proj.tags}
+                                description={proj.description}
+                            />
+                        ))}
+                    </section>
+                    <footer>
+                        <p>Contact: your.email@example.com | <a href="#">Download Resume</a></p>
+                    </footer>
+                </div>
+            );
+        };
+
+        // Render the App
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Portfolio />);
+    </script>
+</body>
+</html>
