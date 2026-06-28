@@ -23,7 +23,7 @@ export default function Home() {
         Note: You will need to place your actual background image in the 'public' folder 
         and name it 'hero-bg.jpg', or update the path in src/data/config.ts 
       */}
-      <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-16 md:pb-24 overflow-hidden">
+      <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-4 md:pb-8 overflow-hidden">
         {/* Background Image Overlay */}
         <div 
           className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
