@@ -23,7 +23,7 @@ export default function Home() {
         Note: You will need to place your actual background image in the 'public' folder 
         and name it 'hero-bg.jpg', or update the path in src/data/config.ts 
       */}
-      <div className="relative w-full h-[60vh] md:h-[70vh] flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-16 md:pb-24 overflow-hidden">
         {/* Background Image Overlay */}
         <div 
           className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
@@ -31,10 +31,10 @@ export default function Home() {
         ></div>
         
         {/* Gradient fade to black at the bottom of the hero image */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/20 to-black"></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/60 to-black"></div>
 
-        {/* Center Content */}
-        <div className="relative z-10 flex flex-col items-center text-center mt-[15vh] md:mt-[20vh]">
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center text-center">
           <p className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-1 font-medium">
             PORTFOLIO OF
           </p>
