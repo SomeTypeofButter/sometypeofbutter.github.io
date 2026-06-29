@@ -80,23 +80,27 @@ export default async function ProjectPage({ params }: PageProps) {
                     ))}
                   </div>
                 ) : (
-                  <div className="w-full bg-[#111] aspect-[16/10] relative">
+                  <div className="w-full bg-[#111] relative overflow-hidden">
                     {img.youtubeId ? (
-                      <iframe 
-                        className="absolute inset-0 w-full h-full"
-                        src={`https://www.youtube.com/embed/${img.youtubeId}`}
-                        title="YouTube video player" 
-                        frameBorder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowFullScreen
-                      ></iframe>
+                      <div className="aspect-[16/10] relative">
+                        <iframe 
+                          className="absolute inset-0 w-full h-full"
+                          src={`https://www.youtube.com/embed/${img.youtubeId}`}
+                          title="YouTube video player" 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowFullScreen
+                        ></iframe>
+                      </div>
                     ) : (
-                      <div 
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: `url(${img.url})` }}
-                      >
+                      <div className="w-full">
+                        <img 
+                          src={img.url} 
+                          alt={img.subtitle || "Project image"}
+                          className="w-full h-auto object-cover block"
+                        />
                         {!img.url && (
-                          <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                          <div className="absolute inset-0 w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                         )}
                       </div>
                     )}
