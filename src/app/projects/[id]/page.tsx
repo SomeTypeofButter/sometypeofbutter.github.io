@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -15,9 +15,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: PageProps) {
+export default async function ProjectPage({ params }: PageProps) {
+  // Await the params object
+  const resolvedParams = await params;
+  
   // Find the project data
-  const project = siteConfig.projects.find((p) => p.id === params.id);
+  const project = siteConfig.projects.find((p) => p.id === resolvedParams.id);
 
   if (!project) {
     notFound();
