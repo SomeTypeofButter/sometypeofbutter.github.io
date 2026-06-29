@@ -51,10 +51,10 @@ export const siteConfig = {
       tags: ["UAL", "Unreal Engine", "3D Film"],
       description: "3D animated short exploring the authority of the digital artist.",
       longDescription: "Unreal Engine, Maya, Blender, After Effects.\n\nA Year 1 Immersive Media and Mixed Reality assignment from UAL.\n\nIn an abstract plane of cubicles, a colossal set of hands descends to solve a massive Rubik's Cube architectural structure. CUBICLE.OBJ is a surreal 3D animated short exploring the absolute authority of the digital artist—a visual glorification of the god-like power a creator wields within their virtual canvas.",
-      thumbnail: "/project-3.jpg",
+      thumbnail: "/Thumbnail-Cubicle.png",
       link: "/projects/cubicle-obj",
       contentImages: [
-        { url: "" }, 
+        { url: "/Cubicle-1.png" }, 
         { 
           youtubeId: "ToRvegdSOmk",
           subtitle: "THE NARRATIVE",
