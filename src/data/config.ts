@@ -6,10 +6,9 @@ export const siteConfig = {
     resume: "/resume.pdf",
   },
   socials: [
-    { name: "Instagram", url: "https://instagram.com", icon: "instagram" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-    { name: "ArtStation", url: "https://artstation.com", icon: "artstation" },
-    { name: "GitHub", url: "https://github.com", icon: "github" },
+    { name: "GitHub", url: "https://github.com/SomeTypeofButter", icon: "github" },
+    { name: "Instagram", url: "https://www.instagram.com/", icon: "instagram" },
+    { name: "ArtStation", url: "https://www.artstation.com/jessicasun", icon: "artstation" },
   ],
   projects: [
     {

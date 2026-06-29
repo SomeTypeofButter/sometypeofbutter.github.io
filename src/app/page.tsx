@@ -41,7 +41,7 @@ export default function Home() {
           <p className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-1 font-medium">
             PORTFOLIO OF
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-semibold tracking-wide mb-6">
+          <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-medium tracking-wide mb-6">
             {siteConfig.name}
           </h1>
           
@@ -73,7 +73,7 @@ export default function Home() {
       {/* 
         PROJECTS GRID SECTION 
       */}
-      <div className="w-full max-w-6xl mx-auto px-6 py-12 pb-32">
+      <div className="w-full max-w-4xl mx-auto px-6 py-12 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {siteConfig.projects.map((project) => (
             <a 
