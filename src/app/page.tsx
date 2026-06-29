@@ -104,10 +104,13 @@ export default function Home() {
                 </h3>
                 
                 {project.tags && (
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {project.tags.map((tag, i) => (
-                      <span key={i} className="text-xs text-[#888] uppercase tracking-wider">
-                        {tag}{i < project.tags!.length - 1 ? " • " : ""}
+                  <div className="flex flex-wrap gap-2 mb-3 mt-1">
+                    {project.tags.slice(0, 3).map((tag, i) => (
+                      <span 
+                        key={i} 
+                        className="text-[0.65rem] text-[#aaa] uppercase tracking-wider border border-white/20 px-2 py-0.5 rounded-full"
+                      >
+                        {tag}
                       </span>
                     ))}
                   </div>
