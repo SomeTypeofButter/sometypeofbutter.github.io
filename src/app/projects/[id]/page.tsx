@@ -88,7 +88,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
                 {/* Optional Subtitle and Description aligned to left column space for remaining images */}
                 {index > 0 && (img.subtitle || img.description) && (
-                  <div className="absolute top-1/2 -translate-y-1/2 -left-[42%] w-[35%] hidden lg:block pr-8 bg-black py-4 z-10">
+                  <div className="absolute top-1/2 -translate-y-1/2 -left-[45%] w-[35%] hidden lg:block pr-8 bg-black py-4 z-10 pl-6">
                     {img.subtitle && (
                       <h3 className="text-xl font-light uppercase tracking-wider mb-2">
                         {img.subtitle}
