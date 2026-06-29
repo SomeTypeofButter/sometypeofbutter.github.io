@@ -92,6 +92,11 @@ export const siteConfig = {
           url: "",
           subtitle: "ENVIRONMENT & MATERIALS",
           description: "The surreal aesthetic was enhanced using particle simulators, custom LED screen shaders, and rippling water materials. Post-production in After Effects brought the final composition together with motion tracking, Lumetri color correction, and dynamic editing."
+        },
+        { 
+          url: "",
+          subtitle: "TECHNICAL PIPELINE & PROBLEM SOLVING",
+          description: "Producing Cube Realm required balancing modern simulations with manual techniques. While Unreal Engine offers sophisticated physics, my initial tests showed they weren't efficient for controlling the Rubik's cube. I solved this by breaking the structure into 27 individual meshes, grouping them, and manually animating them in the Sequencer—weighing technical cost against creative reward. I also utilized Blender's shape keys for specific paintbrush deformations and integrated a motion plugin to bypass heavy Blueprint scripting, ensuring production stayed on schedule."
         }
       ]
     }
