@@ -92,16 +92,17 @@ export default async function ProjectPage({ params }: PageProps) {
                           allowFullScreen
                         ></iframe>
                       </div>
-                    ) : (
+                    ) : img.url ? (
                       <div className="w-full">
                         <img 
                           src={img.url} 
                           alt={img.subtitle || "Project image"}
                           className="w-full h-auto object-cover block"
                         />
-                        {!img.url && (
-                          <div className="absolute inset-0 w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                        )}
+                      </div>
+                    ) : (
+                      <div className="w-full aspect-[16/10] relative">
+                        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                       </div>
                     )}
                   </div>
