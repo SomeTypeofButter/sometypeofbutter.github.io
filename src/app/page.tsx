@@ -79,7 +79,7 @@ export default function Home() {
               className="group flex flex-col cursor-pointer"
             >
               {/* Project Thumbnail */}
-              <div className="aspect-square w-full rounded-2xl overflow-hidden mb-4 relative bg-[#0a0a0a] border border-gray-800">
+              <div className="aspect-square w-full rounded-xl overflow-hidden mb-5 relative bg-[#0a0a0a] border border-[#222]">
                 {/* 
                   Replace this placeholder with the Next.js Image component once you add 
                   your actual images to the public folder:
@@ -95,11 +95,11 @@ export default function Home() {
               </div>
               
               {/* Project Info */}
-              <div className="px-1 text-center md:text-left">
-                <h3 className="text-2xl md:text-[1.3rem] font-medium tracking-wide mb-1 transition-colors">
+              <div className="px-0 text-left">
+                <h3 className="text-[1.6rem] md:text-[1.75rem] font-light tracking-wide mb-1 text-white transition-colors">
                   {project.name}
                 </h3>
-                <p className="text-xs text-gray-400 font-light">
+                <p className="text-[0.95rem] text-[#999] font-light">
                   {project.description}
                 </p>
               </div>
