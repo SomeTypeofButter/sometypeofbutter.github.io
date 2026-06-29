@@ -76,18 +76,10 @@ export const siteConfig = {
         { 
           youtubeId: "ToRvegdSOmk",
           subtitle: "THE NARRATIVE",
-          description: "The film opens in a vast realm of uniform cubicles. At its center sits a gigantic structure resembling a Rubik's cube. Colossal hands emerge to solve it. Upon aligning the colors of their windows, the cube explodes, revealing the city seed: a cube with buildings growing on its planes."
+          description: "The film opens in a realm of uniform cubicles centered around a massive Rubik's cube. Colossal hands solve the structure, causing it to explode into a 'city seed'. The hands plant this seed, rapidly spawning a city and painting procedural foliage into existence. Finally, the hands pull back and reach out of a computer monitor, breaking the fourth wall to reveal the entire world was a digital simulation."
         },
-        { 
-          url: "",
-          subtitle: "THE CREATION",
-          description: "The hands plant this seed into the cubicle plane below, and a city is born rapidly. The creator’s hands sweep across the environment, painting procedural foliage into existence. It also reaches into a hole in the ground, twisting a giant pillar to activate water."
-        },
-        { 
-          url: "",
-          subtitle: "THE REVEAL",
-          description: "Finally, the hands reach upward and pull out of a computer monitor, breaking the fourth wall and revealing that it was all a simulation—a testament to the sweeping, instantaneous process of digital creation."
-        }
+        { url: "" },
+        { url: "" }
       ]
     }
   ]
