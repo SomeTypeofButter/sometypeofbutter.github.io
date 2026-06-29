@@ -46,15 +46,30 @@ export const siteConfig = {
       ]
     },
     {
-      id: "project-3",
-      name: "PROJECT NAME",
-      date: "2022",
-      description: "Description of the Project",
-      longDescription: "Detailed description of Project 3.",
+      id: "cubicle-obj",
+      name: "CUBICLE.OBJ",
+      date: "Year 1 - UAL",
+      description: "3D animated short exploring the authority of the digital artist.",
+      longDescription: "Unreal Engine, Maya, Blender, After Effects.\n\nA Year 1 Immersive Media and Mixed Reality assignment from UAL.\n\nIn an abstract plane of cubicles, a colossal set of hands descends to solve a massive Rubik's Cube architectural structure. CUBICLE.OBJ is a surreal 3D animated short exploring the absolute authority of the digital artist—a visual glorification of the god-like power a creator wields within their virtual canvas.",
       thumbnail: "/project-3.jpg",
-      link: "/projects/3",
+      link: "/projects/cubicle-obj",
       contentImages: [
-        { url: "/project-3-1.jpg" }
+        { url: "" }, 
+        { 
+          youtubeId: "ToRvegdSOmk",
+          subtitle: "THE NARRATIVE",
+          description: "The film opens in a vast realm of uniform cubicles. At its center sits a gigantic structure resembling a Rubik's cube. Colossal hands emerge to solve it. Upon aligning the colors of their windows, the cube explodes, revealing the city seed: a cube with buildings growing on its planes."
+        },
+        { 
+          url: "",
+          subtitle: "THE CREATION",
+          description: "The hands plant this seed into the cubicle plane below, and a city is born rapidly. The creator’s hands sweep across the environment, painting procedural foliage into existence. It also reaches into a hole in the ground, twisting a giant pillar to activate water."
+        },
+        { 
+          url: "",
+          subtitle: "THE REVEAL",
+          description: "Finally, the hands reach upward and pull out of a computer monitor, breaking the fourth wall and revealing that it was all a simulation—a testament to the sweeping, instantaneous process of digital creation."
+        }
       ]
     }
   ]

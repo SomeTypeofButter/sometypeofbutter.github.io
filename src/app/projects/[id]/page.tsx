@@ -63,16 +63,27 @@ export default async function ProjectPage({ params }: PageProps) {
           <div className="lg:col-span-9 flex flex-col gap-6">
             {project.contentImages?.map((img, index) => (
               <div key={index} className="relative group">
-                {/* Image */}
+                {/* Media Container (Image or Video) */}
                 <div className="w-full bg-[#111] aspect-[16/10] relative">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${img.url})` }}
-                  >
-                    {!img.url && (
-                      <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                    )}
-                  </div>
+                  {img.youtubeId ? (
+                    <iframe 
+                      className="absolute inset-0 w-full h-full"
+                      src={`https://www.youtube.com/embed/${img.youtubeId}`}
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center"
+                      style={{ backgroundImage: `url(${img.url})` }}
+                    >
+                      {!img.url && (
+                        <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Optional Subtitle and Description aligned to left column space for remaining images */}
