@@ -38,7 +38,7 @@ export const siteConfig = {
       id: "project-onboarding",
       name: "PROJECT ONBOARDING",
       date: "2025",
-      tags: ["Unreal Engine", "VR", "Surreal Horror"],
+      tags: ["Unreal Engine", "VR"],
       description: "A surreal corporate horror experience about a nightmare onboarding.",
       longDescription: "Project Onboarding is an immersive Unreal Engine experience combining surreal, abstract elements with corporate horror and dark satire.\n\nA new employee's morning commute is violently interrupted when they are sucked through a kaleidoscopic city portal into a dystopian corporate office where workers are literal numbers and friendly balloon-executives are violently popped by giant hands. The protagonist abruptly wakes from this surreal nightmare to the chilling reality of their actual first day of work—complete with a forced welcome party mirroring the horrors they just witnessed.",
       thumbnail: "/project-2.jpg",
