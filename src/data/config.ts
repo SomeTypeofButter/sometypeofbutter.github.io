@@ -16,8 +16,9 @@ export const siteConfig = {
       name: "PROJECT ONBOARDING",
       date: "2025",
       tags: ["Unreal Engine", "VR"],
+      software: ["Unreal Engine", "Marvelous Designer", "TouchDesigner", "MetaHuman"],
       description: "A surreal corporate horror experience about a nightmare onboarding.",
-      longDescription: "Project Onboarding is an immersive Unreal Engine experience combining surreal, abstract elements with corporate horror and dark satire.\n\nA new employee's morning commute is violently interrupted when they are sucked through a kaleidoscopic city portal into a dystopian corporate office where workers are literal numbers and friendly balloon-executives are violently popped by giant hands. The protagonist abruptly wakes from this surreal nightmare to the chilling reality of their actual first day of work—complete with a forced welcome party mirroring the horrors they just witnessed.",
+      longDescription: "A new employee's morning commute is violently interrupted when they are sucked through a kaleidoscopic city portal into a dystopian corporate office where workers are literal numbers and friendly balloon-executives are violently popped by giant hands. The protagonist abruptly wakes from this surreal nightmare to the chilling reality of their actual first day of work—complete with a forced welcome party mirroring the horrors they just witnessed.",
       thumbnail: "/project-2.jpg",
       link: "/projects/project-onboarding",
       contentImages: [
@@ -49,8 +50,9 @@ export const siteConfig = {
       name: "CUBICLE.OBJ",
       date: "2025",
       tags: ["UAL", "Unreal Engine", "3D Film"],
+      software: ["Unreal Engine", "Maya", "Blender", "After Effects"],
       description: "3D animated short exploring the authority of the digital artist.",
-      longDescription: "Unreal Engine, Maya, Blender, After Effects.\n\nA Year 1 Immersive Media and Mixed Reality assignment from UAL.\n\nIn an abstract plane of cubicles, a colossal set of hands descends to solve a massive Rubik's Cube architectural structure. CUBICLE.OBJ is a surreal 3D animated short exploring the absolute authority of the digital artist—a visual glorification of the god-like power a creator wields within their virtual canvas.",
+      longDescription: "A Year 1 Immersive Media and Mixed Reality assignment from UAL.\n\nIn an abstract plane of cubicles, a colossal set of hands descends to solve a massive Rubik's Cube architectural structure. CUBICLE.OBJ is a surreal 3D animated short exploring the absolute authority of the digital artist—a visual glorification of the god-like power a creator wields within their virtual canvas.",
       thumbnail: "/Thumbnail-Cubicle.png",
       link: "/projects/cubicle-obj",
       contentImages: [

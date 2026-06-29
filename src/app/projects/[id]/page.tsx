@@ -48,9 +48,22 @@ export default async function ProjectPage({ params }: PageProps) {
               </h1>
               
               {project.date && (
-                <p className="text-gray-400 text-lg mb-8 font-light tracking-wider">
+                <p className="text-gray-400 text-lg mb-4 font-light tracking-wider">
                   {project.date}
                 </p>
+              )}
+
+              {project.software && (
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.software.map((sw, i) => (
+                    <span
+                      key={i}
+                      className="text-[0.65rem] text-[#aaa] uppercase tracking-wider border border-white/20 px-2 py-0.5 rounded-full"
+                    >
+                      {sw}
+                    </span>
+                  ))}
+                </div>
               )}
 
               <div className="text-gray-300 font-light leading-relaxed whitespace-pre-wrap">
