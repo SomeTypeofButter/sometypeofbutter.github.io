@@ -73,9 +73,9 @@ export const siteConfig = {
           description: "The project relied heavily on Unreal Engine's Motion Design tools. Cloners and effectors were utilized to animate rippling planes, rising cities, and procedural foliage. The complex Rubik's cube rotations were achieved by seamlessly swapping mesh visibilities to bypass rigid rigging."
         },
         { 
-          url: "",
-          subtitle: "ENVIRONMENT & MATERIALS",
-          description: "The surreal aesthetic was enhanced using particle simulators, custom LED screen shaders, and rippling water materials. Post-production in After Effects brought the final composition together with motion tracking, Lumetri color correction, and dynamic editing."
+          url: "/Cloner.png",
+          subtitle: "MOTION DESIGN PLUGIN MULTI-USE",
+          description: "The Cloner plugin became the backbone of the entire visual language in CUBICLE.OBJ. It drove the rippling planes across the cubicle landscape, the rising wave of buildings spawning from the city seed, and the formation of the central void. Animators created oscillating sine-based movements for subtle floating and breathing effects with minimal keyframing. Procedural static mesh instancing allowed cubes to replicate outward in staggered wave formations\u2014turning a single asset into an endlessly propagating architectural pattern, embodying the project's theme of digital abundance and god-like creative authority."
         },
         { 
           url: "",
