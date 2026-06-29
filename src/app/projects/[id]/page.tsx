@@ -101,9 +101,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         />
                       </div>
                     ) : (
-                      <div className="w-full aspect-[16/10] relative">
-                        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                      </div>
+                      <div className="w-full aspect-[16/10] relative bg-[#0a0a0a]"></div>
                     )}
                   </div>
                 )}

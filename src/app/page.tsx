@@ -91,10 +91,7 @@ export default function Home() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                   style={{ backgroundImage: `url(${project.thumbnail})` }}
-                >
-                  {/* Fallback pattern if image is missing */}
-                  <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                </div>
+                ></div>
               </div>
               
               {/* Project Info */}
