@@ -102,6 +102,17 @@ export default function Home() {
                 <h3 className="text-xl md:text-2xl font-light tracking-wide mb-1 text-white transition-colors">
                   {project.name}
                 </h3>
+                
+                {project.tags && (
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="text-xs text-[#888] uppercase tracking-wider">
+                        {tag}{i < project.tags!.length - 1 ? " • " : ""}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                
                 <p className="text-sm text-[#999] font-light">
                   {project.description}
                 </p>

@@ -14,7 +14,8 @@ export const siteConfig = {
     {
       id: "the-anomaly",
       name: "THE ANOMALY",
-      date: "2023-2024",
+      date: "2025",
+      tags: ["Unreal Engine", "VR", "UAL"],
       description: "VR experience exploring information overload.",
       longDescription: "Description and\npurpose of the project\nDescription and\npurpose of the project",
       thumbnail: "/project-1.jpg",
@@ -36,7 +37,8 @@ export const siteConfig = {
     {
       id: "x-crawler",
       name: "X-CRAWLER",
-      date: "2023",
+      date: "2025",
+      tags: ["Unreal Engine", "VR"],
       description: "Interactive card system and VR interactions.",
       longDescription: "Description and purpose of the X-Crawler project.",
       thumbnail: "/project-2.jpg",
@@ -48,7 +50,8 @@ export const siteConfig = {
     {
       id: "cubicle-obj",
       name: "CUBICLE.OBJ",
-      date: "Year 1 - UAL",
+      date: "2025",
+      tags: ["UAL", "Unreal Engine", "Maya", "Blender", "After Effects"],
       description: "3D animated short exploring the authority of the digital artist.",
       longDescription: "Unreal Engine, Maya, Blender, After Effects.\n\nA Year 1 Immersive Media and Mixed Reality assignment from UAL.\n\nIn an abstract plane of cubicles, a colossal set of hands descends to solve a massive Rubik's Cube architectural structure. CUBICLE.OBJ is a surreal 3D animated short exploring the absolute authority of the digital artist—a visual glorification of the god-like power a creator wields within their virtual canvas.",
       thumbnail: "/project-3.jpg",
