@@ -21,9 +21,9 @@ export const siteConfig = {
       thumbnail: "/project-2.jpg",
       link: "/projects/project-onboarding",
       contentImages: [
-        { url: "" },
+        { youtubeId: "4Nhvi3AhdBo" }, // Main large video
         {
-          url: "",
+          youtubeIdRow: ["4Nhvi3AhdBo", "4Nhvi3AhdBo", "4Nhvi3AhdBo"],
           subtitle: "THE PLANNING",
           description: "The environment was broken into five core spaces: a Kaleidoscopic Portal, a Glass Tunnel, an Infinite Commute labyrinth, a Panopticon Floor, and a hyper-realistic Reality Office finale."
         },

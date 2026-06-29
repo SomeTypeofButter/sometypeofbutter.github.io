@@ -63,28 +63,45 @@ export default async function ProjectPage({ params }: PageProps) {
           <div className="lg:col-span-9 flex flex-col gap-6">
             {project.contentImages?.map((img, index) => (
               <div key={index} className="relative group">
-                {/* Media Container (Image or Video) */}
-                <div className="w-full bg-[#111] aspect-[16/10] relative">
-                  {img.youtubeId ? (
-                    <iframe 
-                      className="absolute inset-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${img.youtubeId}`}
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen
-                    ></iframe>
-                  ) : (
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{ backgroundImage: `url(${img.url})` }}
-                    >
-                      {!img.url && (
-                        <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                      )}
-                    </div>
-                  )}
-                </div>
+                {/* Media Container (Image, Video, or Row of Videos) */}
+                {img.youtubeIdRow ? (
+                  <div className="w-full flex flex-col md:flex-row gap-4 aspect-auto md:aspect-[24/10] bg-transparent">
+                    {img.youtubeIdRow.map((vid, vIndex) => (
+                      <div key={vIndex} className="flex-1 bg-[#111] relative aspect-[16/10] md:aspect-auto h-full">
+                        <iframe 
+                          className="absolute inset-0 w-full h-full"
+                          src={`https://www.youtube.com/embed/${vid}`}
+                          title={`YouTube video player ${vIndex + 1}`} 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="w-full bg-[#111] aspect-[16/10] relative">
+                    {img.youtubeId ? (
+                      <iframe 
+                        className="absolute inset-0 w-full h-full"
+                        src={`https://www.youtube.com/embed/${img.youtubeId}`}
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                      ></iframe>
+                    ) : (
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${img.url})` }}
+                      >
+                        {!img.url && (
+                          <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Optional Subtitle and Description - Restructured to sit natively in the grid instead of floating */}
                 {index > 0 && (img.subtitle || img.description) && (
