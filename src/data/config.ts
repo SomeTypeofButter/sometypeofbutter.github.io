@@ -54,7 +54,7 @@ export const siteConfig = {
       thumbnail: "/Thumbnail-Cubicle.png",
       link: "/projects/cubicle-obj",
       contentImages: [
-        { url: "/Cubicle-1.png" }, 
+        { url: "/Cubicle-Cover.png" }, 
         { 
           youtubeId: "ToRvegdSOmk",
           subtitle: "THE NARRATIVE",
