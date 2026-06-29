@@ -19,10 +19,10 @@ export const siteConfig = {
       software: ["Unreal Engine", "Marvelous Designer", "TouchDesigner", "MetaHuman"],
       description: "A surreal corporate horror experience about a nightmare onboarding.",
       longDescription: "A new employee's morning commute is violently interrupted when they are sucked through a kaleidoscopic city portal into a dystopian corporate office where workers are literal numbers and friendly balloon-executives are violently popped by giant hands. The protagonist abruptly wakes from this surreal nightmare to the chilling reality of their actual first day of work—complete with a forced welcome party mirroring the horrors they just witnessed.",
-      thumbnail: "/project-2.jpg",
+      thumbnail: "/OB-TB.png",
       link: "/projects/project-onboarding",
       contentImages: [
-        { url: "/OB-TB.png" },
+        { url: "/Onboarding_1.png" },
         { 
           url: "/Onboarding_2.png",
           subtitle: "THE PLANNING",
