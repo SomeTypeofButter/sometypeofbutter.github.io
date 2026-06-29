@@ -22,19 +22,19 @@ export const siteConfig = {
       thumbnail: "/project-2.jpg",
       link: "/projects/project-onboarding",
       contentImages: [
-        { youtubeId: "4Nhvi3AhdBo" }, // Main large video
-        {
-          youtubeIdRow: ["SyYjXhg-plY", "4EMc5AhUi0Q", "9VvTEKnEfps"],
+        { url: "/OB-TB.png" },
+        { 
+          url: "/Onboarding_2.png",
           subtitle: "THE PLANNING",
           description: "The environment was broken into five core spaces: a Kaleidoscopic Portal, a Glass Tunnel, an Infinite Commute labyrinth, a Panopticon Floor, and a hyper-realistic Reality Office finale."
         },
         {
-          url: "",
+          url: "/Onboarding_3.png",
           subtitle: "THE PROCESS",
           description: "Complex animation stitching was required to choreograph interactions between hyper-realistic MetaHuman eyes, physics-driven balloon heads, and giant hands. Procedural geometry, leveraging Unreal Engine's Cloner plugin, powered the hypnotic portal suction by building the spiral and moving tunnel architectures. Adjusting pacing, scale, and spatial presence in VR was critical to ensure comfort while maintaining the imposing feeling of giantism and confinement."
         },
         {
-          url: "",
+          url: "/Onboarding_4.png",
           subtitle: "THE RESULT",
           description: "A dream-logic horror experience exploring themes of dehumanization and toxic company culture. The horrific events in the simulation directly mirror and foreshadow the seemingly innocent 'welcome party' at the end—reframing the visual chaos as an externalization of psychological anxiety regarding work."
         },
