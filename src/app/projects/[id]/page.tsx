@@ -9,6 +9,12 @@ interface PageProps {
   };
 }
 
+export function generateStaticParams() {
+  return siteConfig.projects.map((project) => ({
+    id: project.id,
+  }));
+}
+
 export default function ProjectPage({ params }: PageProps) {
   // Find the project data
   const project = siteConfig.projects.find((p) => p.id === params.id);
