@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: PageProps) {
         {/* Back Button */}
         <Link 
           href="/" 
-          className="inline-flex items-center text-white hover:text-gray-400 transition-colors mb-12 relative z-30"
+          className="inline-flex items-center text-white hover:text-gray-400 transition-colors mb-12"
         >
           <FaArrowLeft className="text-xl" />
         </Link>
@@ -40,9 +40,9 @@ export default async function ProjectPage({ params }: PageProps) {
         {/* Layout Container */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative">
           
-          {/* Left Column (Sticky Sidebar) - Project Info */}
-          <div className="lg:col-span-3 relative z-20">
-            <div className="lg:sticky lg:top-0 bg-black pt-12 pb-12 -mt-12">
+          {/* Left Column - Project Info */}
+          <div className="lg:col-span-3">
+            <div>
               <h1 className="text-4xl lg:text-5xl font-light uppercase tracking-wide mb-6 leading-tight">
                 {project.name}
               </h1>
