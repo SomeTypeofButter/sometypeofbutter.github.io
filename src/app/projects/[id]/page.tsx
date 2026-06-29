@@ -86,19 +86,21 @@ export default async function ProjectPage({ params }: PageProps) {
                   )}
                 </div>
 
-                {/* Optional Subtitle and Description aligned to left column space for remaining images */}
+                {/* Optional Subtitle and Description - Restructured to sit natively in the grid instead of floating */}
                 {index > 0 && (img.subtitle || img.description) && (
-                  <div className="absolute top-1/2 -translate-y-1/2 -left-[80%] w-[50%] hidden lg:block pr-8 bg-black py-4 z-10 pl-[8%]">
-                    {img.subtitle && (
-                      <h3 className="text-xl font-light uppercase tracking-wider mb-2">
-                        {img.subtitle}
-                      </h3>
-                    )}
-                    {img.description && (
-                      <p className="text-gray-400 text-sm font-light leading-relaxed">
-                        {img.description}
-                      </p>
-                    )}
+                  <div className="absolute top-1/2 -translate-y-1/2 right-[100%] w-[33.333vw] max-w-[400px] hidden lg:block pr-12 lg:pr-24 bg-black py-4 z-10 pointer-events-none">
+                    <div className="pointer-events-auto">
+                      {img.subtitle && (
+                        <h3 className="text-xl font-light uppercase tracking-wider mb-2">
+                          {img.subtitle}
+                        </h3>
+                      )}
+                      {img.description && (
+                        <p className="text-gray-400 text-sm font-light leading-relaxed">
+                          {img.description}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 )}
                 
