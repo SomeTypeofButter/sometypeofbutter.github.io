@@ -53,7 +53,7 @@ export const siteConfig = {
         {
           url: "",
           subtitle: "THE PROCESS",
-          description: "Complex animation stitching was required to choreograph interactions between hyper-realistic MetaHuman eyes, physics-driven balloon heads, and giant hands. Procedural geometry and Chaos physics powered the hypnotic portal suction."
+          description: "Complex animation stitching was required to choreograph interactions between hyper-realistic MetaHuman eyes, physics-driven balloon heads, and giant hands. Procedural geometry, leveraging Unreal Engine's Cloner plugin, powered the hypnotic portal suction by building the spiral and moving tunnel architectures."
         },
         {
           url: "",
