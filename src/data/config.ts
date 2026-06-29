@@ -61,12 +61,12 @@ export const siteConfig = {
           description: "The film opens in a realm of uniform cubicles centered around a massive Rubik's cube. Colossal hands solve the structure, causing it to explode into a 'city seed'. The hands plant this seed, rapidly spawning a city and painting procedural foliage into existence. Finally, the hands pull back and reach out of a computer monitor, breaking the fourth wall to reveal the entire world was a digital simulation."
         },
         { 
-          url: "",
+          url: "/Planning-cubcile.png",
           subtitle: "ARCHITECTURAL RESEARCH",
           description: "Inspired by Habitat 67's 'Metabolism' and Le Corbusier's 'Bottle Rack' concepts, the environment encapsulates surrealism and brutalism. The design envisions cubicles as growing, adaptable organisms within massive, machine-like urban structures."
         },
         { 
-          url: "",
+          url: "/Cubicle2.png",
           subtitle: "PROCEDURAL PIPELINE",
           description: "The project relied heavily on Unreal Engine's Motion Design tools. Cloners and effectors were utilized to animate rippling planes, rising cities, and procedural foliage. The complex Rubik's cube rotations were achieved by seamlessly swapping mesh visibilities to bypass rigid rigging."
         },
