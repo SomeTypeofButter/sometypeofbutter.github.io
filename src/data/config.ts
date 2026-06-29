@@ -12,29 +12,6 @@ export const siteConfig = {
   ],
   projects: [
     {
-      id: "the-anomaly",
-      name: "THE ANOMALY",
-      date: "2025",
-      tags: ["Unreal Engine", "VR", "UAL"],
-      description: "VR experience exploring information overload.",
-      longDescription: "Description and\npurpose of the project\nDescription and\npurpose of the project",
-      thumbnail: "/project-1.jpg",
-      link: "/projects/the-anomaly",
-      contentImages: [
-        { url: "/anomaly-1.jpg" }, // First image (no sidebar text)
-        { 
-          url: "/anomaly-2.jpg",
-          subtitle: "DRAFTING",
-          description: "Description of the drafting goes here"
-        },
-        { 
-          url: "/anomaly-3.jpg",
-          subtitle: "DRAFTING",
-          description: "Description of the drafting goes here"
-        }
-      ]
-    },
-    {
       id: "project-onboarding",
       name: "PROJECT ONBOARDING",
       date: "2025",
