@@ -38,12 +38,12 @@ export default async function ProjectPage({ params }: PageProps) {
         </Link>
 
         {/* Layout Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-32 relative">
           
           {/* Left Column - Project Info */}
           <div className="lg:col-span-3">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-light uppercase tracking-wide mb-6 leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-light uppercase tracking-wide mb-6 leading-tight">
                 {project.name}
               </h1>
               
@@ -88,7 +88,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
                 {/* Optional Subtitle and Description aligned to left column space for remaining images */}
                 {index > 0 && (img.subtitle || img.description) && (
-                  <div className="absolute top-1/2 -translate-y-1/2 -left-[33.33%] w-[25%] hidden lg:block pr-8">
+                  <div className="absolute top-1/2 -translate-y-1/2 -left-[42%] w-[35%] hidden lg:block pr-8 bg-black py-4 z-10">
                     {img.subtitle && (
                       <h3 className="text-xl font-light uppercase tracking-wider mb-2">
                         {img.subtitle}
