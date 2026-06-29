@@ -60,7 +60,7 @@ export default function Home() {
                 href={social.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-[#b0b0b0] text-black hover:bg-white rounded-md flex items-center justify-center transition-all duration-300"
+                className="text-white hover:text-[#b0b0b0] transition-colors p-1"
                 aria-label={social.name}
               >
                 {renderIcon(social.icon)}
@@ -99,10 +99,10 @@ export default function Home() {
               
               {/* Project Info */}
               <div className="px-0 text-left">
-                <h3 className="text-[1.6rem] md:text-[1.75rem] font-light tracking-wide mb-1 text-white transition-colors">
+                <h3 className="text-xl md:text-2xl font-light tracking-wide mb-1 text-white transition-colors">
                   {project.name}
                 </h3>
-                <p className="text-[0.95rem] text-[#999] font-light">
+                <p className="text-sm text-[#999] font-light">
                   {project.description}
                 </p>
               </div>
