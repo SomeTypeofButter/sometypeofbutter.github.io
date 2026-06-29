@@ -23,6 +23,9 @@ export const siteConfig = {
       link: "/projects/project-onboarding",
       contentImages: [
         { youtubeId: "cYOegphVUF0" },
+        {
+          imageRow: ["/OB-GIF2.gif", "/OB-GIF1.gif", "/OB-GIF3.gif"]
+        },
         { 
           url: "/Onboarding_2.png",
           subtitle: "THE PLANNING",

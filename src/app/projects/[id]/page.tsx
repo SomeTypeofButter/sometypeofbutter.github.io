@@ -76,8 +76,21 @@ export default async function ProjectPage({ params }: PageProps) {
           <div className="lg:col-span-9 flex flex-col gap-6">
             {project.contentImages?.map((img, index) => (
               <div key={index} className="relative group">
-                {/* Media Container (Image, Video, or Row of Videos) */}
-                {img.youtubeIdRow ? (
+                {/* Media Container (Image, Video, Row of Videos, or Row of Images) */}
+                {img.imageRow ? (
+                  <div className="w-full flex flex-col md:flex-row gap-4">
+                    {img.imageRow.map((src, iIndex) => (
+                      <div key={iIndex} className="flex-1 bg-[#111] relative overflow-hidden">
+                        <img
+                          src={src}
+                          alt={`GIF ${iIndex + 1}`}
+                          className="w-full h-auto object-cover block"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : img.youtubeIdRow ? (
                   <div className="w-full flex flex-col md:flex-row gap-4 aspect-auto md:aspect-[24/10] bg-transparent">
                     {img.youtubeIdRow.map((vid, vIndex) => (
                       <div key={vIndex} className="flex-1 bg-[#111] relative aspect-[16/10] md:aspect-auto h-full">
