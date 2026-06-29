@@ -23,18 +23,21 @@ export default function Home() {
         Note: You will need to place your actual background image in the 'public' folder 
         and name it 'hero-bg.jpg', or update the path in src/data/config.ts 
       */}
-      <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-4 md:pb-8 overflow-hidden">
+      <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-2 md:pb-4 overflow-hidden">
         {/* Background Image Overlay */}
         <div 
-          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 z-0 opacity-100 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${siteConfig.heroImage})` }}
         ></div>
         
-        {/* Gradient fade to black at the bottom of the hero image */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/60 to-black"></div>
+        {/* Radial vignette gradient (dark corners, bright center) */}
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_rgba(0,0,0,0.9)_100%)]"></div>
+        
+        {/* Additional bottom fade to ensure seamless blending with the black page */}
+        <div className="absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center">
+        <div className="relative z-10 flex flex-col items-center text-center translate-y-1">
           <p className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-1 font-medium">
             PORTFOLIO OF
           </p>
