@@ -22,7 +22,7 @@ export const siteConfig = {
       thumbnail: "/OB-TB.png",
       link: "/projects/project-onboarding",
       contentImages: [
-        { url: "/Onboarding_1.png" },
+        { youtubeId: "cYOegphVUF0" },
         { 
           url: "/Onboarding_2.png",
           subtitle: "THE PLANNING",
