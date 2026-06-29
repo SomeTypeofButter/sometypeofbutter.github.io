@@ -60,9 +60,9 @@ export default async function ProjectPage({ params }: PageProps) {
           </div>
 
           {/* Right Column - Scrolling Images */}
-          <div className="lg:col-span-9 flex flex-col">
+          <div className="lg:col-span-9 flex flex-col gap-6">
             {project.contentImages?.map((img, index) => (
-              <div key={index} className="mb-0 relative group">
+              <div key={index} className="relative group">
                 {/* Image */}
                 <div className="w-full bg-[#111] aspect-[16/10] relative">
                   <div 
