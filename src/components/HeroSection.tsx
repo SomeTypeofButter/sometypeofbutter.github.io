@@ -75,7 +75,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
-          boxShadow: "inset 0 0 120px 80px black",
+          boxShadow: "inset 0 0 180px 120px black",
         }}
       />
 
