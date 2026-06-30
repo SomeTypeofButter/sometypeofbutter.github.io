@@ -28,7 +28,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans">
-      <div className="max-w-[1600px] mx-auto p-8 lg:p-12 overflow-hidden">
+      <div className="max-w-[1600px] mx-auto p-8 lg:p-12">
         {/* Back Button */}
         <Link 
           href="/" 
@@ -38,10 +38,10 @@ export default async function ProjectPage({ params }: PageProps) {
         </Link>
 
         {/* Layout Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-32 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] xl:grid-cols-[1fr_3fr] gap-12 lg:gap-16 xl:gap-24 relative">
           
           {/* Left Column - Project Info */}
-          <div className="lg:col-span-4 xl:col-span-3">
+          <div className="min-w-0">
             <div>
               <h1 className="text-3xl lg:text-4xl font-light uppercase tracking-wide mb-6 leading-tight">
                 {project.name}
@@ -73,7 +73,7 @@ export default async function ProjectPage({ params }: PageProps) {
           </div>
 
           {/* Right Column - Scrolling Images */}
-          <div className="lg:col-span-8 xl:col-span-9 flex flex-col gap-6 min-w-0">
+          <div className="flex flex-col gap-6 min-w-0">
             {project.contentImages?.map((img, index) => (
               <div key={index} className="relative group w-full max-w-full">
                 {/* Media Container (Image, Video, Row of Videos, or Row of Images) */}
@@ -91,26 +91,15 @@ export default async function ProjectPage({ params }: PageProps) {
                     ))}
                   </div>
                 ) : img.imageRow ? (
-                  <div
-                    className="w-full gap-4 hidden md:grid"
-                    style={{ gridTemplateColumns: `repeat(${img.imageRow.length}, minmax(0, 1fr))` }}
-                  >
+                  <div className="w-full flex flex-col md:flex-row gap-4">
                     {img.imageRow.map((src, iIndex) => (
-                      <div key={iIndex} className="bg-[#111] relative overflow-hidden min-w-0">
+                      <div key={iIndex} className="flex-1 basis-0 min-w-0 bg-[#111] relative overflow-hidden">
                         <img
                           src={src}
                           alt={`GIF ${iIndex + 1}`}
                           className="w-full h-auto block"
                           loading="lazy"
                         />
-                      </div>
-                    ))}
-                  </div>
-                  {/* Mobile: stack vertically */}
-                  <div className="w-full flex flex-col gap-4 md:hidden">
-                    {img.imageRow.map((src, iIndex) => (
-                      <div key={iIndex} className="bg-[#111] overflow-hidden">
-                        <img src={src} alt={`GIF ${iIndex + 1}`} className="w-full h-auto block" loading="lazy" />
                       </div>
                     ))}
                   </div>
