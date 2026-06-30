@@ -54,7 +54,7 @@ export default function HeroSection() {
   const fgY = offset.y * 5;
 
   return (
-    <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-2 md:pb-4 overflow-hidden">
+    <div className="relative w-full h-[76vh] md:h-[81vh] flex flex-col items-center justify-end pb-2 md:pb-4 overflow-hidden">
       {/* Background image — moves opposite to mouse for depth */}
       <div
         className="absolute inset-0 z-0 opacity-100 bg-cover bg-center bg-no-repeat"
