@@ -93,7 +93,7 @@ export default async function ProjectPage({ params }: PageProps) {
                 ) : img.imageRow ? (
                   <div className="w-full flex flex-col md:flex-row gap-4">
                     {img.imageRow.map((src, iIndex) => (
-                      <div key={iIndex} className="flex-1 bg-[#111] relative overflow-hidden">
+                      <div key={iIndex} className="flex-1 min-w-0 bg-[#111] relative overflow-hidden">
                         <img
                           src={src}
                           alt={`GIF ${iIndex + 1}`}
