@@ -48,10 +48,10 @@ export default function HeroSection() {
     };
   }, []);
 
-  const bgX = offset.x * -18;
-  const bgY = offset.y * -18;
-  const fgX = offset.x * 8;
-  const fgY = offset.y * 8;
+  const bgX = offset.x * -10;
+  const bgY = offset.y * -10;
+  const fgX = offset.x * 5;
+  const fgY = offset.y * 5;
 
   return (
     <div className="relative w-full h-[85vh] md:h-[90vh] flex flex-col items-center justify-end pb-2 md:pb-4 overflow-hidden">
@@ -71,21 +71,33 @@ export default function HeroSection() {
       {/* Bottom fade */}
       <div className="absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
-      {/* Content — moves with mouse, floats in front */}
+      {/* Edge blur mask */}
       <div
-        className="relative z-10 flex flex-col items-center text-center translate-y-1"
+        className="absolute inset-0 z-[1] pointer-events-none"
         style={{
-          transform: `translate(${fgX}px, ${fgY}px)`,
-          willChange: "transform",
+          boxShadow: "inset 0 0 80px 40px black",
         }}
-      >
-        <p className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-1 font-medium">
-          PORTFOLIO OF
-        </p>
-        <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-medium tracking-wide mb-6">
-          {siteConfig.name}
-        </h1>
+      />
 
+      {/* Content wrapper — static */}
+      <div className="relative z-10 flex flex-col items-center text-center translate-y-1">
+
+        {/* Name — moves with mouse */}
+        <div
+          style={{
+            transform: `translate(${fgX}px, ${fgY}px)`,
+            willChange: "transform",
+          }}
+        >
+          <p className="text-gray-400 text-sm tracking-[0.2em] uppercase mb-1 font-medium">
+            PORTFOLIO OF
+          </p>
+          <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-medium tracking-wide mb-6">
+            {siteConfig.name}
+          </h1>
+        </div>
+
+        {/* Nav + socials — static */}
         <div className="flex gap-4 text-[#8a8a8a] text-sm tracking-widest uppercase mb-10">
           <a href={siteConfig.links.about} className="hover:text-white transition-colors">ABOUT ME</a>
           <span className="text-gray-600">|</span>
