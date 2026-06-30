@@ -56,27 +56,40 @@ export default function HeroSection() {
   const fgX = offset.x * 5;
   const fgY = offset.y * 5;
 
+  const tiltX = offset.y * -3;
+  const tiltY = offset.x * 3;
+
   return (
     <div className="relative w-full h-[76vh] md:h-[81vh] flex flex-col items-center justify-end pb-2 md:pb-4 overflow-hidden">
-      {/* BG layer — very subtle parallax */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(/BG.png)`,
-          transform: `translate(${bgX}px, calc(${bgY}px - 5%)) scale(0.92)`,
-          willChange: "transform",
-        }}
-      />
 
-      {/* Front layer — mid parallax */}
+      {/* Perspective wrapper — gives 3D tilt to image layers */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(/Front.png)`,
-          transform: `translate(${midX}px, calc(${midY}px - 5%)) scale(0.92)`,
-          willChange: "transform",
+          perspective: "1200px",
+          perspectiveOrigin: "50% 50%",
         }}
-      />
+      >
+        {/* BG layer — very subtle parallax + gentle tilt */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(/BG.png)`,
+            transform: `translate(${bgX}px, calc(${bgY}px - 5%)) scale(0.92) rotateX(${tiltX * 0.4}deg) rotateY(${tiltY * 0.4}deg)`,
+            willChange: "transform",
+          }}
+        />
+
+        {/* Front layer — mid parallax + slightly more tilt */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(/Front.png)`,
+            transform: `translate(${midX}px, calc(${midY}px - 5%)) scale(0.92) rotateX(${tiltX * 0.7}deg) rotateY(${tiltY * 0.7}deg)`,
+            willChange: "transform",
+          }}
+        />
+      </div>
 
       {/* Radial vignette */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_rgba(0,0,0,0.9)_100%)]" />
