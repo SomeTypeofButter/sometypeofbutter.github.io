@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
                 {/* Optional Subtitle and Description - Restructured to sit natively in the grid instead of floating */}
                 {index > 0 && (img.subtitle || img.description) && (
-                  <div className="absolute top-1/2 -translate-y-1/2 right-[100%] w-[33.333vw] max-w-[400px] hidden lg:block pr-12 lg:pr-24 bg-black py-4 z-10 pointer-events-none">
+                  <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-full w-[33.333vw] max-w-[400px] hidden lg:block pr-12 lg:pr-24 bg-black py-4 z-10 pointer-events-none">
                     <div className="pointer-events-auto">
                       {img.subtitle && (
                         <h3 className="text-xl font-light uppercase tracking-wider mb-2">
