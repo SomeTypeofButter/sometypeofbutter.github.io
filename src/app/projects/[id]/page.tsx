@@ -77,7 +77,20 @@ export default async function ProjectPage({ params }: PageProps) {
             {project.contentImages?.map((img, index) => (
               <div key={index} className="relative group">
                 {/* Media Container (Image, Video, Row of Videos, or Row of Images) */}
-                {img.imageRow ? (
+                {img.imageGrid ? (
+                  <div className="w-full grid grid-cols-2 gap-4">
+                    {img.imageGrid.map((src, iIndex) => (
+                      <div key={iIndex} className="bg-[#111] relative overflow-hidden">
+                        <img
+                          src={src}
+                          alt={`Image ${iIndex + 1}`}
+                          className="w-full h-auto object-cover block"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : img.imageRow ? (
                   <div className="w-full flex flex-col md:flex-row gap-4">
                     {img.imageRow.map((src, iIndex) => (
                       <div key={iIndex} className="flex-1 bg-[#111] relative overflow-hidden">
@@ -142,9 +155,19 @@ export default async function ProjectPage({ params }: PageProps) {
                         </h3>
                       )}
                       {img.description && (
-                        <p className="text-gray-400 text-sm font-light leading-relaxed">
+                        <p className="text-gray-400 text-sm font-light leading-relaxed mb-4">
                           {img.description}
                         </p>
+                      )}
+                      {img.tags && (
+                        <div className="flex flex-col gap-4 mt-4">
+                          {img.tags.map((tag, tIndex) => (
+                            <div key={tIndex}>
+                              <span className="text-[#aaa] uppercase tracking-wider block mb-1">{tag.label}</span>
+                              <p className="text-gray-400 font-light leading-relaxed">{tag.text}</p>
+                            </div>
+                          ))}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -159,9 +182,19 @@ export default async function ProjectPage({ params }: PageProps) {
                       </h3>
                     )}
                     {img.description && (
-                      <p className="text-gray-400 text-sm font-light leading-relaxed">
+                      <p className="text-gray-400 font-light leading-relaxed mb-4">
                         {img.description}
                       </p>
+                    )}
+                    {img.tags && (
+                      <div className="flex flex-col gap-4 mt-4">
+                        {img.tags.map((tag, tIndex) => (
+                          <div key={tIndex}>
+                            <span className="text-[#aaa] uppercase tracking-wider block mb-1">{tag.label}</span>
+                            <p className="text-gray-400 font-light leading-relaxed">{tag.text}</p>
+                          </div>
+                        ))}
+                      </div>
                     )}
                   </div>
                 )}
