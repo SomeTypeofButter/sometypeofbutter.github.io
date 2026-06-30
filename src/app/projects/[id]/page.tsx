@@ -91,15 +91,26 @@ export default async function ProjectPage({ params }: PageProps) {
                     ))}
                   </div>
                 ) : img.imageRow ? (
-                  <div className="w-full flex flex-col md:flex-row gap-4">
+                  <div
+                    className="w-full gap-4 hidden md:grid"
+                    style={{ gridTemplateColumns: `repeat(${img.imageRow.length}, minmax(0, 1fr))` }}
+                  >
                     {img.imageRow.map((src, iIndex) => (
-                      <div key={iIndex} className="flex-1 min-w-0 bg-[#111] relative overflow-hidden">
+                      <div key={iIndex} className="bg-[#111] relative overflow-hidden min-w-0">
                         <img
                           src={src}
                           alt={`GIF ${iIndex + 1}`}
-                          className="w-full h-auto object-cover block"
+                          className="w-full h-auto block"
                           loading="lazy"
                         />
+                      </div>
+                    ))}
+                  </div>
+                  {/* Mobile: stack vertically */}
+                  <div className="w-full flex flex-col gap-4 md:hidden">
+                    {img.imageRow.map((src, iIndex) => (
+                      <div key={iIndex} className="bg-[#111] overflow-hidden">
+                        <img src={src} alt={`GIF ${iIndex + 1}`} className="w-full h-auto block" loading="lazy" />
                       </div>
                     ))}
                   </div>
