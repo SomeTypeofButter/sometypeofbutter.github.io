@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden">
       <div className="max-w-[1600px] mx-auto p-8 lg:p-12">
         {/* Back Button */}
         <Link 
@@ -38,7 +38,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </Link>
 
         {/* Layout Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-32 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-32 relative">
           
           {/* Left Column - Project Info */}
           <div className="lg:col-span-3">
