@@ -74,7 +74,7 @@ export default function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(/BG.png)`,
+            backgroundImage: `url(/BG-1.png)`,
             transform: `translate(${bgX}px, calc(${bgY}px - 5%)) scale(0.92) rotateX(${tiltX * 0.4}deg) rotateY(${tiltY * 0.4}deg)`,
             willChange: "transform",
           }}
