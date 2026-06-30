@@ -49,19 +49,31 @@ export default function HeroSection() {
     };
   }, []);
 
-  const bgX = offset.x * -10;
-  const bgY = offset.y * -10;
+  const bgX = offset.x * -4;
+  const bgY = offset.y * -4;
+  const midX = offset.x * -12;
+  const midY = offset.y * -12;
   const fgX = offset.x * 5;
   const fgY = offset.y * 5;
 
   return (
     <div className="relative w-full h-[76vh] md:h-[81vh] flex flex-col items-center justify-end pb-2 md:pb-4 overflow-hidden">
-      {/* Background image — moves opposite to mouse for depth */}
+      {/* BG layer — very subtle parallax */}
       <div
-        className="absolute inset-0 z-0 opacity-100 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${siteConfig.heroImage})`,
-          transform: `translate(${bgX}px, calc(${bgY}px - 5%)) scale(0.9)`,
+          backgroundImage: `url(/BG.png)`,
+          transform: `translate(${bgX}px, calc(${bgY}px - 5%)) scale(0.92)`,
+          willChange: "transform",
+        }}
+      />
+
+      {/* Front layer — mid parallax */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(/Front.png)`,
+          transform: `translate(${midX}px, calc(${midY}px - 5%)) scale(0.92)`,
           willChange: "transform",
         }}
       />
