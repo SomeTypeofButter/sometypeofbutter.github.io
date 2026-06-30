@@ -81,13 +81,13 @@ export default function ParticleField({ layer }: Props) {
     const spread = { x: 10, y: 5 };
     const zRange = isBg ? [-4, -1] : [0.5, 2];
     const opacity = isBg ? 0.18 : 0.32;
-    const sizeRange = isBg ? [0.3, 0.55] : [0.15, 0.35];
+    const sizeRange = isBg ? [0.24, 0.44] : [0.12, 0.28];
 
     const particles: Particle[] = [];
 
     for (let i = 0; i < count; i++) {
       const s = sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
-      const geo = new THREE.BoxGeometry(s, s * (1.3 + Math.random() * 0.6), s * 0.8);
+      const geo = new THREE.BoxGeometry(s, s, s);
       const mat = new THREE.MeshBasicMaterial({
         map: texture,
         transparent: true,
@@ -112,7 +112,7 @@ export default function ParticleField({ layer }: Props) {
         mesh,
         vx: (Math.random() - 0.5) * (isBg ? 0.002 : 0.003),
         vy: (Math.random() - 0.5) * (isBg ? 0.001 : 0.002),
-        vr: (Math.random() - 0.5) * (isBg ? 0.001 : 0.002),
+        vr: (Math.random() - 0.5) * (isBg ? 0.005 : 0.009),
         phase: Math.random() * Math.PI * 2,
       });
     }
@@ -127,7 +127,9 @@ export default function ParticleField({ layer }: Props) {
       for (const p of particles) {
         p.mesh.position.x += p.vx;
         p.mesh.position.y += p.vy + Math.sin(t + p.phase) * 0.0005;
+        p.mesh.rotation.x += p.vr * 0.6;
         p.mesh.rotation.y += p.vr;
+        p.mesh.rotation.z += p.vr * 0.4;
 
         if (p.mesh.position.x > spread.x) p.mesh.position.x = -spread.x;
         if (p.mesh.position.x < -spread.x) p.mesh.position.x = spread.x;
