@@ -73,7 +73,7 @@ export default async function ProjectPage({ params }: PageProps) {
           </div>
 
           {/* Right Column - Scrolling Images */}
-          <div className="lg:col-span-8 xl:col-span-9 flex flex-col gap-6">
+          <div className="lg:col-span-8 xl:col-span-9 flex flex-col gap-6 min-w-0">
             {project.contentImages?.map((img, index) => (
               <div key={index} className="relative group">
                 {/* Media Container (Image, Video, Row of Videos, or Row of Images) */}
