@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/data/config";
 import { FaInstagram, FaLinkedin, FaArtstation, FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
+import ParticleField from "@/components/ParticleField";
 
 const renderIcon = (iconName: string) => {
   switch (iconName.toLowerCase()) {
@@ -79,6 +80,11 @@ export default function HeroSection() {
         }}
       />
 
+      {/* Background particles — behind content */}
+      <div className="absolute inset-0 z-[2] pointer-events-none">
+        <ParticleField layer="bg" />
+      </div>
+
       {/* Content wrapper — static */}
       <div className="relative z-10 flex flex-col items-center text-center translate-y-1">
 
@@ -118,6 +124,11 @@ export default function HeroSection() {
             </a>
           ))}
         </div>
+      </div>
+
+      {/* Foreground particles — in front of content */}
+      <div className="absolute inset-0 z-20 pointer-events-none">
+        <ParticleField layer="fg" />
       </div>
     </div>
   );
