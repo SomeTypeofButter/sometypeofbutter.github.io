@@ -60,7 +60,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0 opacity-100 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${siteConfig.heroImage})`,
-          transform: `translate(${bgX}px, ${bgY}px) scale(1.06)`,
+          transform: `translate(${bgX}px, ${bgY}px) scale(0.9)`,
           willChange: "transform",
         }}
       />
@@ -75,7 +75,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
-          boxShadow: "inset 0 0 80px 40px black",
+          boxShadow: "inset 0 0 120px 80px black",
         }}
       />
 
