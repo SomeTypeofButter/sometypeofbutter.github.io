@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white font-sans">
       <div className="max-w-[1600px] mx-auto p-8 lg:p-12">
         {/* Back Button */}
         <Link 
@@ -73,9 +73,9 @@ export default async function ProjectPage({ params }: PageProps) {
           </div>
 
           {/* Right Column - Scrolling Images */}
-          <div className="lg:col-span-8 xl:col-span-9 flex flex-col gap-6 min-w-0 overflow-hidden">
+          <div className="lg:col-span-8 xl:col-span-9 flex flex-col gap-6 min-w-0">
             {project.contentImages?.map((img, index) => (
-              <div key={index} className="relative group w-full">
+              <div key={index} className="relative group w-full max-w-full">
                 {/* Media Container (Image, Video, Row of Videos, or Row of Images) */}
                 {img.imageGrid ? (
                   <div className="w-full grid grid-cols-2 gap-4">
@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
                 {/* Optional Subtitle and Description - Restructured to sit natively in the grid instead of floating */}
                 {index > 0 && (img.subtitle || img.description) && (
-                  <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-full w-[33.333vw] max-w-[400px] hidden lg:block pr-12 lg:pr-24 bg-black py-4 z-10 pointer-events-none">
+                  <div className="absolute top-1/2 -translate-y-1/2 right-[100%] w-[33.333vw] max-w-[400px] hidden lg:block pr-12 lg:pr-24 bg-black py-4 z-10 pointer-events-none">
                     <div className="pointer-events-auto">
                       {img.subtitle && (
                         <h3 className="text-xl font-light uppercase tracking-wider mb-2">
