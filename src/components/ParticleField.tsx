@@ -7,19 +7,17 @@ interface Props {
   layer: "bg" | "fg";
 }
 
-function makeWindowTexture(): THREE.CanvasTexture {
+function makeWindowTexture(dark = false): THREE.CanvasTexture {
   const size = 128;
   const c = document.createElement("canvas");
   c.width = size;
   c.height = size;
   const ctx = c.getContext("2d")!;
 
-  // solid grey-green face
-  ctx.fillStyle = "rgba(72, 88, 72, 1)";
+  ctx.fillStyle = dark ? "rgba(2, 8, 8, 1)" : "rgba(72, 88, 72, 1)";
   ctx.fillRect(0, 0, size, size);
 
-  // window grid lines — slightly lighter
-  ctx.strokeStyle = "rgba(110, 135, 110, 0.9)";
+  ctx.strokeStyle = dark ? "rgba(20, 40, 40, 0.9)" : "rgba(110, 135, 110, 0.9)";
   ctx.lineWidth = 2;
 
   const cols = 3;
@@ -76,6 +74,7 @@ export default function ParticleField({ layer }: Props) {
     camera.position.z = layer === "bg" ? 10 : 5;
 
     const texture = makeWindowTexture();
+    const textureDark = makeWindowTexture(true);
     const isBg = layer === "bg";
     const count = isBg ? 3 : 4;
     const spread = { x: 10, y: 5 };
@@ -88,8 +87,9 @@ export default function ParticleField({ layer }: Props) {
     for (let i = 0; i < count; i++) {
       const s = sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
       const geo = new THREE.BoxGeometry(s, s, s);
+      const useDark = i < 2;
       const mat = new THREE.MeshBasicMaterial({
-        map: texture,
+        map: useDark ? textureDark : texture,
         transparent: true,
         opacity,
         depthWrite: false,
